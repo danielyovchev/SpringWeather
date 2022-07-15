@@ -1,16 +1,15 @@
 package com.example.springexample.Domain.Service;
 
-import com.example.springexample.Data.DB.Entity.Place;
 import com.example.springexample.Data.DB.Repository.PlaceRepository;
 import com.example.springexample.Domain.Service.Exception.IdNotExistingException;
 import com.example.springexample.Domain.Service.Interface.PlaceDeleteService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PlaceDeleteSeriveImpl implements PlaceDeleteService {
+public class PlaceDeleteServiceImpl implements PlaceDeleteService {
     private final PlaceRepository placeRepository;
 
-    public PlaceDeleteSeriveImpl(PlaceRepository placeRepository) {
+    public PlaceDeleteServiceImpl(PlaceRepository placeRepository) {
         this.placeRepository = placeRepository;
     }
 
