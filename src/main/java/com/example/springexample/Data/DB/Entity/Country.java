@@ -11,20 +11,20 @@ public class Country {
     private String name;
     @OneToMany(mappedBy = "country")
     private Set<Place> places;
-    public Country(long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
+//    public Country(long id, String name) {
+//        this.id = id;
+//        this.name = name;
+//    }
 
-    public Country() {
+//    public Country() {
+//
+//    }
 
-    }
-
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

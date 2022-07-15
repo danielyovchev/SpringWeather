@@ -19,24 +19,24 @@ public class Place {
     @JoinColumn(name="typeId",insertable = false,updatable = false)
     private Type type;
 
-    public Place(long id, String name, double latitude, double longitude, long countryId, long typeId) {
+    /*public Place(Long id, String name, double latitude, double longitude, long countryId, long typeId) {
         this.id = id;
         this.name = name;
         this.latitude = latitude;
         this.longitude = longitude;
         this.countryId = countryId;
         this.typeId = typeId;
-    }
+    }*/
 
     public Place() {
 
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
