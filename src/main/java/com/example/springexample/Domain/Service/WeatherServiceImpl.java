@@ -34,11 +34,5 @@ public class WeatherServiceImpl implements WeatherService {
         return WeatherResponse.builder().place(place.getName()).country(place.getCountry().getName()).type(place.getType().getDescription()).
                 description(weatherApiResponse.getCurrent().getCondition().getText()).
                 degrees(weatherApiResponse.getCurrent().getTemp_c()).humidity(weatherApiResponse.getCurrent().getHumidity()).build();
-//        return Weather.builder().
-//                location(weatherApiResponse.getLocation().getName()).
-//                degrees(weatherApiResponse.getCurrent().getTemp_c()).
-//                humidity(weatherApiResponse.getCurrent().getHumidity()).
-//                description(weatherApiResponse.getCurrent().getCondition().getText()).build();
-        //return new Weather(weatherApiResponse.location.name, weatherApiResponse.current.temp_c,weatherApiResponse.current.humidity,weatherApiResponse.current.condition.text);
     }
 }
