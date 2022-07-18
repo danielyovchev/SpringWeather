@@ -1,12 +1,13 @@
 package com.example.springexample.Domain.Service;
 
+import com.example.springexample.API.Model.PlaceFindResponse;
 import com.example.springexample.API.Model.PlaceGetResponse;
 import com.example.springexample.Data.DB.Entity.Place;
 import com.example.springexample.Data.DB.Repository.PlaceRepository;
 import com.example.springexample.Domain.Service.Exception.EmptyPlaceException;
 import com.example.springexample.Domain.Service.Interface.PlaceGetService;
 import org.springframework.stereotype.Service;
-
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -26,4 +27,13 @@ public class PlaceGetServiceImpl implements PlaceGetService {
         return PlaceGetResponse.builder().place(place.get().getName()).country(place.get().getCountry().getName()).
                 type(place.get().getType().getDescription()).latitude(place.get().getLatitude()).longitude(place.get().getLongitude()).build();
     }
+
+    @Override
+    public PlaceFindResponse getFilteredPlace(String name) {
+        List <String> placeList = placeRepository.findAllByName(name).stream().map(x -> x.toString()).toList();
+        //placeList.stream().map(x -> x.toString());
+
+        return PlaceFindResponse.builder().foundPlacesList(placeList).build();
+    }
+
 }

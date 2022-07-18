@@ -95,4 +95,18 @@ public class Place {
     public void setType(Type type) {
         this.type = type;
     }
+
+    @Override
+    public String toString() {
+        return "Place{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                ", countryId=" + countryId +
+                ", typeId=" + typeId +
+                ", country=" + country +
+                ", type=" + type +
+                '}';
+    }
 }

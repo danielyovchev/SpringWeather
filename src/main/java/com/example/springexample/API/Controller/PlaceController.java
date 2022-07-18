@@ -40,4 +40,8 @@ public class PlaceController {
     public String showPlace(@RequestParam Long id) throws EmptyPlaceException {
         return placeGetService.getSelectedPlace(id).toString();
     }
+    @GetMapping("/getByName")
+    public String showPlaceByName(@RequestParam String name){
+        return placeGetService.getFilteredPlace(name).toString();
+    }
 }
