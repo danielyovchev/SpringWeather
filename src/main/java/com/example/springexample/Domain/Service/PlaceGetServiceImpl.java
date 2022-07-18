@@ -30,10 +30,7 @@ public class PlaceGetServiceImpl implements PlaceGetService {
 
     @Override
     public PlaceFindResponse getFilteredPlace(String name) {
-        List <String> placeList = placeRepository.findAllByName(name).stream().map(x -> x.toString()).toList();
-        //placeList.stream().map(x -> x.toString());
-
-        return PlaceFindResponse.builder().foundPlacesList(placeList).build();
+        return PlaceFindResponse.builder().foundPlacesList(placeRepository.findAllByName(name).stream().map(x -> x.toString()).toList()).build();
     }
 
 }
