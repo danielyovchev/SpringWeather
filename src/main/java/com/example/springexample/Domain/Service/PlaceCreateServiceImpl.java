@@ -25,7 +25,7 @@ public class PlaceCreateServiceImpl implements PlaceCreateService {
     }
 
     @Override
-    public Long getCreatedPlaceId(PlaceCreateRequest placeCreateRequest) throws FoundException {
+    public PlaceCreateResponse getCreatedPlaceId(PlaceCreateRequest placeCreateRequest) throws FoundException {
         Type type = typeRepository.findByDescription(placeCreateRequest.getType());
         Country country = countryRepository.findByName(placeCreateRequest.getCountry());
         Place place = placeRepository.findByNameAndCountryName(placeCreateRequest.getPlace(), placeCreateRequest.getCountry());
@@ -50,6 +50,6 @@ public class PlaceCreateServiceImpl implements PlaceCreateService {
         place.setLongitude(placeCreateRequest.getLongitude());
         placeRepository.save(place);
 
-        return place.getId();
+        return PlaceCreateResponse.builder().id(place.getId()).build();
     }
 }

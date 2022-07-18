@@ -24,7 +24,7 @@ public class PlaceController {
     }
     @PostMapping("/add")
     public Long showCreatedPlaceId(@RequestBody PlaceCreateRequest placeCreateRequest) throws FoundException {
-        return placeCreateService.getCreatedPlaceId(placeCreateRequest);
+        return placeCreateService.getCreatedPlaceId(placeCreateRequest).getId();
     }
 
     @DeleteMapping("/delete")

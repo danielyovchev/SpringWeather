@@ -5,5 +5,5 @@ import com.example.springexample.API.Model.PlaceCreateResponse;
 import com.example.springexample.Domain.Service.Exception.FoundException;
 
 public interface PlaceCreateService {
-    Long getCreatedPlaceId(PlaceCreateRequest placeCreateRequest) throws FoundException;
+    PlaceCreateResponse getCreatedPlaceId(PlaceCreateRequest placeCreateRequest) throws FoundException;
 }
