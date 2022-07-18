@@ -7,7 +7,6 @@ import com.example.springexample.Data.DB.Repository.PlaceRepository;
 import com.example.springexample.Domain.Service.Exception.EmptyPlaceException;
 import com.example.springexample.Domain.Service.Interface.PlaceGetService;
 import org.springframework.stereotype.Service;
-import java.util.List;
 import java.util.Optional;
 
 @Service
