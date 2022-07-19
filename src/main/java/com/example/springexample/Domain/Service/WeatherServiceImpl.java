@@ -31,8 +31,13 @@ public class WeatherServiceImpl implements WeatherService {
                 getRestTemplate().
                 getForObject(url, WeatherApiResponse.class);
         assert weatherApiResponse != null;
+        double temperature = weatherApiResponse.getCurrent().getTemp_c();
+        boolean flag = weatherRequest.isFahrenheit();
+        if(flag){
+            temperature = (weatherApiResponse.getCurrent().getTemp_c()*9/5)+32;
+        }
         return WeatherResponse.builder().place(place.getName()).country(place.getCountry().getName()).type(place.getType().getDescription()).
                 description(weatherApiResponse.getCurrent().getCondition().getText()).
-                degrees(weatherApiResponse.getCurrent().getTemp_c()).humidity(weatherApiResponse.getCurrent().getHumidity()).build();
+                degrees(temperature).humidity(weatherApiResponse.getCurrent().getHumidity()).build();
     }
 }

@@ -8,4 +8,5 @@ import lombok.Setter;
 public class WeatherRequest {
     private String place;
     private String country;
+    private boolean isFahrenheit;
 }

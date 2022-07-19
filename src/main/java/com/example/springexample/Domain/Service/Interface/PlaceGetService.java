@@ -6,5 +6,5 @@ import com.example.springexample.Domain.Service.Exception.EmptyPlaceException;
 
 public interface PlaceGetService {
     PlaceGetResponse getSelectedPlace(Long id) throws EmptyPlaceException;
-    PlaceFindResponse getFilteredPlace(String name);
+
 }
