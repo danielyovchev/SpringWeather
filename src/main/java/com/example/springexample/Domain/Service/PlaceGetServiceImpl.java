@@ -26,10 +26,4 @@ public class PlaceGetServiceImpl implements PlaceGetService {
         return PlaceGetResponse.builder().place(place.get().getName()).country(place.get().getCountry().getName()).
                 type(place.get().getType().getDescription()).latitude(place.get().getLatitude()).longitude(place.get().getLongitude()).build();
     }
-
-    /*@Override
-    public PlaceFindResponse getFilteredPlace(String name) {
-        return PlaceFindResponse.builder().foundPlacesList(placeRepository.findAllByName(name).stream().map(x -> x.toString()).toList()).build();
-    }*/
-
 }

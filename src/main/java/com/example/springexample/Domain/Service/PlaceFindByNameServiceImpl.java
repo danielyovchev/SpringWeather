@@ -3,7 +3,7 @@ package com.example.springexample.Domain.Service;
 import com.example.springexample.API.Model.PlaceFindResponse;
 import com.example.springexample.API.Model.PlaceModel;
 import com.example.springexample.Data.DB.Repository.PlaceRepository;
-import com.example.springexample.Domain.PlaceMapper;
+import com.example.springexample.Domain.Service.Mapper.PlaceMapper;
 import com.example.springexample.Domain.Service.Interface.PlaceFindByNameService;
 import org.springframework.stereotype.Service;
 

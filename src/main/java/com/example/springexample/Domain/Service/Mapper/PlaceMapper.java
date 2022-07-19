@@ -1,4 +1,4 @@
-package com.example.springexample.Domain;
+package com.example.springexample.Domain.Service.Mapper;
 
 import com.example.springexample.API.Model.PlaceModel;
 import com.example.springexample.Data.DB.Entity.Place;
