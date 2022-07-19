@@ -2,7 +2,7 @@ package com.example.springexample.API.Model;
 
 import lombok.*;
 
-@Getter @Setter(AccessLevel.PRIVATE) @Builder @ToString
+@Getter @Setter @Builder @ToString
 public class WeatherResponse {
     private String place;
     private String country;
