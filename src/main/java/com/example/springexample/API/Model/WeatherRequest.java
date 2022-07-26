@@ -1,5 +1,6 @@
 package com.example.springexample.API.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.AccessLevel;
@@ -14,5 +15,5 @@ public class WeatherRequest {
     private String country;
     @JsonDeserialize(using = WeatherRequestDeserializer.class)
     @JsonProperty("фаренхайт")
-    private boolean isFahrenheit;
+    private Boolean isFahrenheit;
 }

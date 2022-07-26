@@ -1,6 +1,4 @@
 package com.example.springexample.API.Model;
-
-import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -12,7 +10,6 @@ public class WeatherRequestDeserializer extends JsonDeserializer<Boolean> {
     @Override
     public Boolean deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException{
         JsonToken currentToken = jsonParser.getCurrentToken();
-
         if (currentToken.equals(JsonToken.VALUE_STRING)) {
             String text = jsonParser.getText();
 

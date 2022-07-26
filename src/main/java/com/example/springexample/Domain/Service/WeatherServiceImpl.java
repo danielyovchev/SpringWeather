@@ -42,7 +42,7 @@ public class WeatherServiceImpl implements WeatherService {
                         .degrees(x.getCurrent().getTemp_c())
                         .humidity(x.getCurrent().getHumidity()).build())
                 .peek(x -> {
-                    if(weatherRequest.isFahrenheit()){
+                    if(weatherRequest.getIsFahrenheit()){
                         x.setDegrees((x.getDegrees()*9/5)+32);
                     }
                 })
